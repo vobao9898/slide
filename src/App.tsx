@@ -101,7 +101,7 @@ function App() {
   }, []);
   function beforeChange(current: number, next: number) {
     setIndexSlide(next);
-    if (next === 4) {
+    if (next === 3) {
       setIsIconNext(true);
     } else {
       setIsIconNext(false);
