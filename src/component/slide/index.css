@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box !important;
+}
+
+.slide {
+    transform: scale(0.2);
+    transition: transform 300ms;
+}
+
+.activeSlide {
+    transform: scale(1.1);
+}
+
+.arrow {
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    height: 36px !important;
+    width: 36px !important;
+    border-radius: 36px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 18px);
+    border: 1px solid #0000001c;
+}
+
+.arrow:hover {
+    transform: scale(1.3)!important;
+    transition: all .2s
+}
+
+.next {
+    right: 0%;
+    font-size: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    color: #22222285;
+    right: -18px;
+}
+
+.prev {
+    left: 0%;
+    font-size: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    color: #22222285;
+    left: -18px;
+}
+
+
+/* css data slide */
+
+.slide-item {
+    height: 180px;
+    width: 100%;
+}
+
+.slide-item__one {
+    height: 90px;
+    width: auto !important;
+    display: flex;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    margin: 5px 1%;
+}
+
+.slide-item__left {
+    width: 80px;
+}
+
+.slide-item__left img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.slide-item-rigth {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.slide-item-rigth .slide-content__title {
+    color: #222;
+    font-size: 14px!important;
+    line-height: 20px!important;
+    text-decoration: none;
+    white-space: nowrap;
+    max-width: 73%;
+    margin-top: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.slide-item-rigth .slide-content__wage {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.33;
+    color: #d0021b;
+    display: inline-block;
+    margin: 2px 4px 0 0;
+}
+
+.slide-item-rigth .slide-content__address {
+    color: #9b9b9b;
+}
+
+.slide-item-rigth .slide-content__address i {
+    margin-right: 5px;
+}
+
+.slick-track {
+    display: flex;
+}
+
+.slick-slide {
+    width: 9% !important;
+}
