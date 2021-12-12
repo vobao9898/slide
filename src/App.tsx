@@ -91,8 +91,14 @@ function App() {
   useEffect(() => {
     if (window.screen.availWidth < 740) {
       setisScreen(true);
+      setIsIconNext(true);
+      setIsIconPrev(true);
+    } else {
+      setisScreen(false);
+      setIsIconNext(false);
+      setIsIconPrev(true);
     }
-  }, [window.screen.width]);
+  }, []);
   function beforeChange(current: number, next: number) {
     setIndexSlide(next);
     if (next === 4) {

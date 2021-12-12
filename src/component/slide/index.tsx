@@ -11,7 +11,7 @@ export interface IProps {
   infinite?: boolean;
   indexSlide?: number;
   beforeChange: (c: number, n: number) => void;
-  isScreen?: boolean;
+  isScreen: boolean;
 }
 
 function Slide(props: IProps) {
@@ -29,7 +29,7 @@ function Slide(props: IProps) {
     dots: dots,
     infinite: infinite,
     speed: speed ? speed : 500,
-    slidesToShow: 2,
+    slidesToShow: isScreen === true ? 1 : 2,
     slidesToScroll: 1,
     nextArrow: nextArrow,
     prevArrow: prevArrow,
@@ -40,7 +40,11 @@ function Slide(props: IProps) {
     if (datas.length > 0) {
       let dataT = datas as Array<any>;
       html = dataT.map((item, index, array) => {
-        if (isScreen ? index % 2 === 0 : 1 === 1 && index + 1 < dataT.length) {
+        var stemp = index % 2 === 0;
+        var stemp1 = isScreen ? true : stemp;
+        var stemp2 = index + 1 < dataT.length;
+        var stemp3 = isScreen ? true : stemp2;
+        if (stemp1 && stemp3) {
           return (
             <div key={`slide-${index}`} className="slide-item">
               <div className="slide-item__one">
@@ -58,7 +62,7 @@ function Slide(props: IProps) {
                   </div>
                 </div>
               </div>
-              {isScreen ? null : (
+              {isScreen === true ? null : (
                 <div className="slide-item__one">
                   <div className="slide-item__left">
                     <img alt="" src={array[index + 1].image} />
