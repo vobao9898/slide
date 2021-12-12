@@ -117,5 +117,9 @@
 }
 
 .slick-slide {
-    width: 9% !important;
+    width: 9%;
+}
+
+.block-arrow {
+    display: none;
 }
