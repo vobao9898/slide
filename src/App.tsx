@@ -95,12 +95,12 @@ function App() {
   }, [window.screen.width]);
   function beforeChange(current: number, next: number) {
     setIndexSlide(next);
-    if (next === 3) {
+    if (next === 4) {
       setIsIconNext(true);
     } else {
       setIsIconNext(false);
     }
-    if (current === 0) {
+    if (current === 1) {
       setIsIconPrev(true);
     } else {
       setIsIconPrev(false);
@@ -122,6 +122,7 @@ function App() {
           infinite={false}
           indexSlide={indexSlide}
           beforeChange={(current, next) => beforeChange(current, next)}
+          isScreen={isScreen}
         ></Slide>
       </div>
     </div>
