@@ -52,7 +52,7 @@
 }
 
 
-/* css data slide */
+/* css data slide start */
 
 .slide-item {
     /* height: 180px; */
@@ -122,4 +122,120 @@
 
 .block-arrow {
     display: none;
+}
+
+
+/* css data slide end */
+
+
+/* css recruitment */
+
+.recruitment_slide {
+    display: flex;
+}
+
+.recruitment_slides {
+    width: 800px;
+    margin: auto;
+}
+
+.recrutment-Image {
+    width: 100%;
+    height: 450px;
+}
+
+.recrutment-Image img {
+    width: 100%;
+    height: 100%;
+}
+
+.recruitment_slide .slick-slide {
+    width: 50%;
+}
+
+.arrowR {
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    height: 36px !important;
+    width: 36px !important;
+    border-radius: 5px;
+    background-color: #5d5856;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 18px);
+    border: 1px solid #0000001c;
+}
+
+.arrowR:hover {
+    background-color: #353231;
+}
+
+.nextR {
+    right: 0%;
+    font-size: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    color: #a9a4a2;
+    right: 5px;
+}
+
+.prevR {
+    left: 0%;
+    font-size: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    color: #a9a4a2;
+    left: 5px;
+}
+
+.recruitment_slide .slick-dots {
+    bottom: 10px;
+}
+
+.recruitment_slide .slick-dots li button:before {
+    font-size: 12px;
+}
+
+.recrutment-Image {
+    width: 100%;
+    height: 100%;
+}
+
+.recrutment-Image .recruitment-phone {
+    width: 140px;
+    height: 45px;
+    border-radius: 45px;
+    background-color: white;
+    color: #33a637;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.recrutment-Image .recruitment-phone img {
+    height: 20px;
+    width: 20px;
+    margin: 0 15px;
+}
+
+.recrutment-Image__background {
+    background-color: #00000040;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.fs-7 {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 1px) and (max-width: 1024px) {
+    .recruitment_slide .recruitment_slides {
+        width: 100%;
+    }
 }
